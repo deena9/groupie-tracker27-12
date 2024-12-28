@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"text/template"
+
+	"01.gritlab.ax/git/gaddamo/groupie-tracker/functions"
 )
 
 var (
@@ -41,8 +43,8 @@ func main() {
 	}
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	http.HandleFunc("/", HomeHandler)
-	http.HandleFunc("/artist/", ArtistHandler)
+	http.HandleFunc("/", functions.HomeHandler)
+	http.HandleFunc("/artist/", functions.ArtistHandler)
 
 	log.Println("Server started on http://localhost:8080")
 	if err := http.ListenAndServe(":8080", nil); err != nil {

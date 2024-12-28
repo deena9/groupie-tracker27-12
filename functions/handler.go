@@ -1,11 +1,21 @@
-package main
+package functions
 
 import (
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 	"strconv"
 )
+
+// ...existing code...
+var artistTmpl = template.Must(template.ParseFiles("static/templates/artist/template.html"))
+var homeTmpl = template.Must(template.ParseFiles("static/templates/home/template.html"))
+var error400Tmpl = template.Must(template.ParseFiles("static/templates/400.html"))
+var error404Tmpl = template.Must(template.ParseFiles("static/templates/404.html"))
+var error500Tmpl = template.Must(template.ParseFiles("static/templates/500.html"))
+
+// ...existing code...
 
 func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 	FetchAllData()
