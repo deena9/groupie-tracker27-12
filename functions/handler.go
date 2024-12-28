@@ -9,11 +9,11 @@ import (
 )
 
 // ...existing code...
-var artistTmpl = template.Must(template.ParseFiles("static/templates/artist/template.html"))
-var homeTmpl = template.Must(template.ParseFiles("static/templates/home/template.html"))
-var error400Tmpl = template.Must(template.ParseFiles("static/templates/400.html"))
-var error404Tmpl = template.Must(template.ParseFiles("static/templates/404.html"))
-var error500Tmpl = template.Must(template.ParseFiles("static/templates/500.html"))
+var artistTmpl = template.Must(template.ParseFiles("static/artist.html"))
+var homeTmpl = template.Must(template.ParseFiles("static/index.html"))
+var error400Tmpl = template.Must(template.ParseFiles("static/400.html"))
+var error404Tmpl = template.Must(template.ParseFiles("static/404.html"))
+var error500Tmpl = template.Must(template.ParseFiles("static/500.html"))
 
 // ...existing code...
 
